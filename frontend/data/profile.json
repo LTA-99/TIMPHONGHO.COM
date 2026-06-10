@@ -19,6 +19,22 @@
       "tone": "blue"
     },
     {
+      "name": "Messenger",
+      "description": "Nhắn tin Facebook · Tư vấn nhanh",
+      "url": "https://m.me/ARIK.TIMPHONGHO",
+      "image": "./assets/images/Facebook_Messenger.jpg",
+      "icon": "chat",
+      "tone": "blue"
+    },
+    {
+      "name": "TikTok",
+      "description": "Video phòng · Cập nhật mới",
+      "url": "https://www.tiktok.com/@THAY_LINK",
+      "image": "./assets/images/tiktok.jpg",
+      "icon": "video",
+      "tone": "red"
+    },
+    {
       "name": "Zalo",
       "description": "Nhắn tin · Tư vấn nhanh",
       "url": "https://zalo.me/THAY_SO_DIEN_THOAI",
