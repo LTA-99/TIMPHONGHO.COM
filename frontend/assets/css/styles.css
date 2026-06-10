@@ -172,7 +172,7 @@ button {
   background: transparent;
   color: var(--soft);
   cursor: pointer;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
   text-align: center;
   transition: color 150ms ease, border-color 150ms ease;
