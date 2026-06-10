@@ -87,6 +87,47 @@ const renderProcess = (items) => {
     .join("");
 };
 
+const openLightbox = (image) => {
+  const lightbox = document.querySelector("[data-lightbox]");
+  const lightboxImage = document.querySelector("[data-lightbox-image]");
+  if (!lightbox || !lightboxImage) return;
+
+  lightboxImage.src = image.src;
+  lightboxImage.alt = image.alt;
+  lightbox.hidden = false;
+};
+
+const closeLightbox = () => {
+  const lightbox = document.querySelector("[data-lightbox]");
+  const lightboxImage = document.querySelector("[data-lightbox-image]");
+  if (!lightbox || !lightboxImage) return;
+
+  lightbox.hidden = true;
+  lightboxImage.src = "";
+  lightboxImage.alt = "";
+};
+
+const bindLightbox = () => {
+  document.addEventListener("click", (event) => {
+    const processImage = event.target.closest(".process-image img");
+    if (processImage) {
+      openLightbox(processImage);
+      return;
+    }
+
+    if (
+      event.target.matches("[data-lightbox]") ||
+      event.target.closest("[data-lightbox-close]")
+    ) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeLightbox();
+  });
+};
+
 const bindTabs = () => {
   document.querySelectorAll("[data-tab-button]").forEach((button) => {
     button.addEventListener("click", () => {
@@ -132,3 +173,4 @@ fetch("./data/profile.json")
   .catch(() => renderProfile(fallbackProfile));
 
 bindTabs();
+bindLightbox();
