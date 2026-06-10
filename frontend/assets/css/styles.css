@@ -15,6 +15,8 @@
   --red-soft: #faece7;
   --yellow-ink: #633806;
   --yellow-soft: #faeeda;
+  --shadow: 0 14px 34px rgba(17, 17, 17, 0.14);
+  --shadow-soft: 0 8px 22px rgba(17, 17, 17, 0.1);
 }
 
 * {
@@ -52,6 +54,7 @@ a {
   align-items: center;
   gap: 16px;
   background: var(--card);
+  box-shadow: var(--shadow);
 }
 
 .avatar {
@@ -139,12 +142,13 @@ a {
   align-items: center;
   gap: 12px;
   background: var(--card);
+  box-shadow: var(--shadow-soft);
   transition: background 150ms ease, transform 150ms ease;
 }
 
 .link-card:hover {
   background: #f9f9f9;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
 .link-icon {
@@ -215,6 +219,7 @@ a {
   justify-content: space-between;
   gap: 14px;
   background: var(--green);
+  box-shadow: var(--shadow);
 }
 
 .cta-block p {
