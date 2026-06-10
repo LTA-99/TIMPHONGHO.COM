@@ -33,20 +33,6 @@
       "image": "./assets/images/tiktok.jpg",
       "icon": "video",
       "tone": "red"
-    },
-    {
-      "name": "Zalo",
-      "description": "Nhắn tin · Tư vấn nhanh",
-      "url": "https://zalo.me/THAY_SO_DIEN_THOAI",
-      "icon": "chat",
-      "tone": "green"
-    },
-    {
-      "name": "Gọi điện",
-      "description": "0912.345.678 · Hỗ trợ 7/7",
-      "url": "tel:0912345678",
-      "icon": "phone",
-      "tone": "green"
     }
   ],
   "about": [
