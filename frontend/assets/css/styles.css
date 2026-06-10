@@ -186,8 +186,11 @@ button {
 
 .tab-content {
   display: none;
-  min-height: 260px;
+  height: min(62vh, 560px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
   padding: 12px 0 16px;
+  scrollbar-width: thin;
 }
 
 .tab-content.show {
