@@ -74,25 +74,6 @@ button {
   display: none;
 }
 
-.cover-cam {
-  position: absolute;
-  right: 12px;
-  bottom: 10px;
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.35);
-}
-
-.cover-cam svg {
-  width: 16px;
-  height: 16px;
-  color: #ffffff;
-}
-
 .profile-body {
   padding: 0 16px;
 }
