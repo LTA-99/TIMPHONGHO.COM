@@ -3,6 +3,8 @@ const fallbackProfile = {
   initials: "TPH",
   pageTitle: "TÌM PHÒNG HỘ · Cho thuê phòng",
   coverText: "Cho thuê phòng · Hà Nội",
+  coverImage: "",
+  avatarImage: "",
   stats: {
     rooms: "12",
     satisfaction: "98%",
@@ -86,8 +88,17 @@ const renderProfile = (profile) => {
 
   const cameraIcon = document.querySelector("[data-camera-icon]");
   const checkIcon = document.querySelector("[data-check-icon]");
+  const cover = document.querySelector("[data-cover]");
+  const avatar = document.querySelector("[data-avatar]");
   if (cameraIcon) cameraIcon.innerHTML = icons.camera;
   if (checkIcon) checkIcon.innerHTML = icons.check;
+  if (cover && merged.coverImage) {
+    cover.style.backgroundImage = `linear-gradient(rgba(15, 110, 86, 0.14), rgba(15, 110, 86, 0.14)), url("${merged.coverImage}")`;
+    cover.classList.add("has-image");
+  }
+  if (avatar && merged.avatarImage) {
+    avatar.innerHTML = `<img src="${merged.avatarImage}" alt="${merged.name}" />`;
+  }
 
   renderLinks(merged.links || []);
   renderAbout(merged.about || []);
