@@ -159,10 +159,6 @@ button {
   font-weight: 400;
 }
 
-.stat-separator {
-  padding: 0 6px;
-}
-
 .tabs {
   border-top: 1px solid var(--line);
   display: flex;

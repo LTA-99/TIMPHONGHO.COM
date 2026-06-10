@@ -5,7 +5,6 @@ const fallbackProfile = {
   avatarImage: "",
   stats: {
     rooms: "12",
-    satisfaction: "98%",
   },
   links: [],
   about: [],
@@ -83,7 +82,6 @@ const renderProfile = (profile) => {
   setText("[data-name]", merged.name);
   setText("[data-initials]", merged.initials);
   setText("[data-room-count]", merged.stats?.rooms || "0");
-  setText("[data-satisfaction]", merged.stats?.satisfaction || "0%");
 
   const checkIcon = document.querySelector("[data-check-icon]");
   const avatar = document.querySelector("[data-avatar]");
