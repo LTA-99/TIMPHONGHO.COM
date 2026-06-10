@@ -2,8 +2,6 @@ const fallbackProfile = {
   name: "TÌM PHÒNG HỘ",
   initials: "TPH",
   pageTitle: "TÌM PHÒNG HỘ · Cho thuê phòng",
-  coverText: "Cho thuê phòng · Hà Nội",
-  coverImage: "",
   avatarImage: "",
   stats: {
     rooms: "12",
@@ -80,18 +78,12 @@ const renderProfile = (profile) => {
   document.title = merged.pageTitle || `${merged.name} · Cho thuê phòng`;
   setText("[data-name]", merged.name);
   setText("[data-initials]", merged.initials);
-  setText("[data-cover-text]", merged.coverText);
   setText("[data-room-count]", merged.stats?.rooms || "0");
   setText("[data-satisfaction]", merged.stats?.satisfaction || "0%");
 
   const checkIcon = document.querySelector("[data-check-icon]");
-  const cover = document.querySelector("[data-cover]");
   const avatar = document.querySelector("[data-avatar]");
   if (checkIcon) checkIcon.innerHTML = icons.check;
-  if (cover && merged.coverImage) {
-    cover.style.backgroundImage = `linear-gradient(rgba(15, 110, 86, 0.14), rgba(15, 110, 86, 0.14)), url("${merged.coverImage}")`;
-    cover.classList.add("has-image");
-  }
   if (avatar && merged.avatarImage) {
     avatar.innerHTML = `<img src="${merged.avatarImage}" alt="${merged.name}" />`;
   }
