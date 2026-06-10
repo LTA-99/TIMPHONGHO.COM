@@ -175,16 +175,13 @@ button {
   font-size: 13px;
   font-weight: 700;
   text-align: center;
-  transition: color 150ms ease, background 150ms ease, border-color 150ms ease;
+  transition: color 150ms ease, border-color 150ms ease;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .tab.active {
   border-bottom-color: var(--green-bright);
   color: var(--green-bright);
-}
-
-.tab:hover {
-  background: #f9f9f9;
 }
 
 .tab-content {
