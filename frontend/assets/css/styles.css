@@ -186,6 +186,7 @@ button {
 
 .tab-content {
   display: none;
+  min-height: 260px;
   padding: 12px 0 16px;
 }
 
