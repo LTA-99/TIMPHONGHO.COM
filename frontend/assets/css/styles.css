@@ -57,7 +57,7 @@ button {
 }
 
 .profile-card {
-  padding: 24px 16px;
+  padding: 16px 14px;
 }
 
 .content-card {
@@ -67,7 +67,7 @@ button {
 .profile-head {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
 }
 
 .avatar-row {
@@ -78,8 +78,8 @@ button {
 }
 
 .avatar {
-  width: 80px;
-  height: 80px;
+  width: 64px;
+  height: 64px;
   overflow: hidden;
   border: 3px solid #ffffff;
   border-radius: 50%;
@@ -89,7 +89,7 @@ button {
   justify-content: center;
   background: var(--green-soft);
   color: var(--green-ink);
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
 }
 
@@ -116,14 +116,14 @@ button {
 .name-row h1 {
   overflow-wrap: anywhere;
   color: var(--text);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 650;
   line-height: 1.25;
 }
 
 .verified {
-  width: 18px;
-  height: 18px;
+  width: 17px;
+  height: 17px;
   border-radius: 50%;
   display: inline-flex;
   flex-shrink: 0;
@@ -141,7 +141,7 @@ button {
 .follow-line {
   margin-bottom: 4px;
   color: var(--soft);
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.45;
 }
 
