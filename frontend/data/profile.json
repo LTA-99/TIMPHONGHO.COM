@@ -20,13 +20,6 @@
       "tone": "blue"
     },
     {
-      "name": "Youtube",
-      "description": "Tour phòng 360°",
-      "url": "https://youtube.com/THAY_LINK",
-      "icon": "youtube",
-      "tone": "red"
-    },
-    {
       "name": "Zalo",
       "description": "Nhắn tin · Tư vấn nhanh",
       "url": "https://zalo.me/THAY_SO_DIEN_THOAI",
