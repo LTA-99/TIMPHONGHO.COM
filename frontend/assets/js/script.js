@@ -35,18 +35,22 @@ const renderLinks = (links) => {
   if (!list) return;
 
   list.innerHTML = links
-    .map(
-      (link) => `
+    .map((link) => {
+      const icon = link.image
+        ? `<img src="${link.image}" alt="" />`
+        : icons[link.icon] || icons.chat;
+
+      return `
         <a class="link-card" href="${link.url}" target="_blank" rel="noreferrer">
-          <span class="link-icon tone-${link.tone || "green"}">${icons[link.icon] || icons.chat}</span>
+          <span class="link-icon tone-${link.tone || "green"}">${icon}</span>
           <span class="link-body">
             <strong>${link.name}</strong>
             <small>${link.description}</small>
           </span>
           <span class="arrow" aria-hidden="true">›</span>
         </a>
-      `,
-    )
+      `;
+    })
     .join("");
 };
 
