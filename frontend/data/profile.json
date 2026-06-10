@@ -1,26 +1,14 @@
 {
   "name": "TÌM PHÒNG HỘ",
   "initials": "TPH",
-  "title": "Cho thuê phòng cao cấp tại Hà Nội",
-  "subtitle": "Uy tín 5 năm",
-  "domain": "timphongho.com",
-  "contactLabel": "Liên hệ",
+  "pageTitle": "TÌM PHÒNG HỘ · Cho thuê phòng",
+  "coverText": "Cho thuê phòng · Hà Nội",
+  "stats": {
+    "rooms": "12",
+    "satisfaction": "98%"
+  },
   "phone": "0912.345.678",
   "phoneHref": "tel:0912345678",
-  "ctaLabel": "Gọi ngay",
-  "sectionLabel": "Kết nối",
-  "footerLeft": "Cho thuê phòng",
-  "footerRight": "Hỗ trợ 7/7",
-  "tags": [
-    {
-      "label": "Cầu Giấy · Đống Đa",
-      "tone": "green"
-    },
-    {
-      "label": "Hỗ trợ 7/7",
-      "tone": "blue"
-    }
-  ],
   "links": [
     {
       "name": "Facebook",
@@ -44,11 +32,18 @@
       "tone": "green"
     },
     {
-      "name": "Xem vị trí trên bản đồ",
-      "description": "Gần ĐH · Giao thông thuận tiện",
-      "url": "https://maps.google.com/?q=THAY_DIA_CHI",
-      "icon": "map",
-      "tone": "yellow"
+      "name": "Gọi điện",
+      "description": "0912.345.678 · Hỗ trợ 7/7",
+      "url": "tel:0912345678",
+      "icon": "phone",
+      "tone": "green"
     }
+  ],
+  "about": [
+    "Cho thuê phòng cao cấp tại Hà Nội.",
+    "<strong>Khu vực:</strong> Cầu Giấy · Đống Đa · Nam Từ Liêm",
+    "<strong>Kinh nghiệm:</strong> 5 năm",
+    "<strong>Hỗ trợ:</strong> 7/7 · Phản hồi trong 5 phút",
+    "<strong>Tiện ích:</strong> Full nội thất · Điều hòa · Wifi"
   ]
 }

@@ -3,54 +3,57 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Nguyễn Văn A · Cho thuê phòng</title>
+    <title>TÌM PHÒNG HỘ · Cho thuê phòng</title>
     <meta
       name="description"
       content="Trang liên hệ nhanh cho dịch vụ cho thuê phòng cao cấp tại Hà Nội."
     />
-    <meta property="og:title" content="Nguyễn Văn A · Cho thuê phòng" />
+    <meta property="og:title" content="TÌM PHÒNG HỘ · Cho thuê phòng" />
     <meta
       property="og:description"
       content="Xem phòng, nhắn tin và gọi nhanh để được tư vấn phòng phù hợp."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://timphongho.com" />
-    <meta name="theme-color" content="#f5f5f5" />
+    <meta name="theme-color" content="#f0f0f0" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
   <body>
     <main class="wrap">
-      <section class="hero-card" aria-labelledby="profile-title">
-        <div class="avatar" data-initials>NA</div>
-        <div class="hero-info">
-          <h1 id="profile-title" data-name>Nguyễn Văn A</h1>
-          <p>
-            <span data-title>Cho thuê phòng cao cấp tại Hà Nội</span>
-            <span class="dot">·</span>
-            <span data-subtitle>Uy tín 5 năm</span>
-          </p>
-          <div class="tag-row" data-tags></div>
-        </div>
+      <section class="cover" aria-label="Ảnh bìa">
+        <span class="cover-text" data-cover-text>Cho thuê phòng · Hà Nội</span>
+        <span class="cover-cam" aria-hidden="true" data-camera-icon></span>
       </section>
 
-      <p class="section-label" data-section-label>Kết nối</p>
-      <section class="links-col" data-links aria-label="Kết nối"></section>
-
-      <section class="cta-block" aria-label="Liên hệ ngay">
-        <div>
-          <p data-contact-label>Liên hệ ngay</p>
-          <strong data-phone>0912.345.678</strong>
+      <section class="profile-body" aria-labelledby="profile-title">
+        <div class="avatar-row">
+          <div class="avatar" data-initials>TPH</div>
         </div>
-        <a class="cta-btn" href="tel:0912345678" data-phone-link>
-          <span class="cta-icon" data-phone-icon></span>
-          <span data-cta-label>Gọi ngay</span>
-        </a>
-      </section>
 
-      <footer class="footer-line">
-        <span data-footer-left>Cho thuê phòng</span>
-        <span data-footer-right>Hỗ trợ 7/7</span>
-      </footer>
+        <div class="name-row">
+          <h1 id="profile-title" data-name>TÌM PHÒNG HỘ</h1>
+          <span class="verified" aria-label="Đã xác thực" data-check-icon></span>
+        </div>
+
+        <p class="follow-line">
+          <strong data-room-count>12</strong> phòng đang thuê
+          <span>·</span>
+          <strong data-satisfaction>98%</strong> khách hài lòng
+        </p>
+
+        <nav class="tabs" aria-label="Nội dung hồ sơ">
+          <button class="tab active" type="button" data-tab-button="contact">Liên hệ</button>
+          <button class="tab" type="button" data-tab-button="about">Giới thiệu</button>
+        </nav>
+
+        <section class="tab-content show" id="tab-contact" data-tab-panel="contact" aria-label="Liên hệ">
+          <div data-contact-links></div>
+        </section>
+
+        <section class="tab-content" id="tab-about" data-tab-panel="about" aria-label="Giới thiệu">
+          <div class="intro-block" data-about></div>
+        </section>
+      </section>
     </main>
 
     <script src="./assets/js/script.js"></script>
