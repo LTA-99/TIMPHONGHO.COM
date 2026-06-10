@@ -44,14 +44,24 @@ button {
 .wrap {
   width: 100%;
   max-width: 480px;
+  display: grid;
+  gap: 12px;
+}
+
+.profile-card,
+.content-card {
   overflow: hidden;
   border-radius: 16px;
   background: var(--card);
   box-shadow: 0 12px 34px rgba(0, 0, 0, 0.12);
 }
 
-.profile-body {
-  padding: 18px 16px 0;
+.profile-card {
+  padding: 24px 16px;
+}
+
+.content-card {
+  padding: 0 16px;
 }
 
 .profile-head {
@@ -145,7 +155,6 @@ button {
 }
 
 .tabs {
-  margin-top: 16px;
   border-top: 1px solid var(--line);
   display: flex;
 }
