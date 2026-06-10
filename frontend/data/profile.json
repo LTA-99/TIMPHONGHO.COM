@@ -36,5 +36,19 @@
   ],
   "about": [
     "Nền tảng kết nối hơn 85.000 phòng cho thuê tại Hà Nội. Cập nhật nguồn phòng mới mỗi ngày với thông tin minh bạch, hình ảnh thực tế, hỗ trợ tìm phòng nhanh chóng và đồng hành cùng khách hàng trong suốt quá trình thuê."
+  ],
+  "process": [
+    {
+      "title": "Gửi nhu cầu",
+      "description": "Cho biết khu vực, ngân sách, số người ở và thời gian muốn nhận phòng."
+    },
+    {
+      "title": "Nhận danh sách phòng phù hợp",
+      "description": "Tư vấn các phòng còn trống, có hình ảnh thực tế và thông tin rõ ràng."
+    },
+    {
+      "title": "Xem phòng và chốt thuê",
+      "description": "Hẹn lịch xem phòng, hỗ trợ trao đổi điều kiện thuê và hoàn tất thủ tục."
+    }
   ]
 }

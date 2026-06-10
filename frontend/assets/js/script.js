@@ -8,6 +8,7 @@ const fallbackProfile = {
   },
   links: [],
   about: [],
+  process: [],
 };
 
 const icons = {
@@ -59,6 +60,25 @@ const renderAbout = (items) => {
   block.innerHTML = items.join("<br><br>");
 };
 
+const renderProcess = (items) => {
+  const list = document.querySelector("[data-process]");
+  if (!list) return;
+
+  list.innerHTML = items
+    .map(
+      (item, index) => `
+        <article class="process-item">
+          <span>${index + 1}</span>
+          <div>
+            <strong>${item.title}</strong>
+            <p>${item.description}</p>
+          </div>
+        </article>
+      `,
+    )
+    .join("");
+};
+
 const bindTabs = () => {
   document.querySelectorAll("[data-tab-button]").forEach((button) => {
     button.addEventListener("click", () => {
@@ -92,6 +112,7 @@ const renderProfile = (profile) => {
 
   renderLinks(merged.links || []);
   renderAbout(merged.about || []);
+  renderProcess(merged.process || []);
 };
 
 fetch("./data/profile.json")
