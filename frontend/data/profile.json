@@ -1,0 +1,54 @@
+{
+  "name": "Nguyễn Văn A",
+  "initials": "NA",
+  "title": "Cho thuê phòng cao cấp tại Hà Nội",
+  "subtitle": "Uy tín 5 năm",
+  "domain": "timphongho.com",
+  "contactLabel": "Liên hệ",
+  "phone": "0912.345.678",
+  "phoneHref": "tel:0912345678",
+  "ctaLabel": "Gọi ngay",
+  "sectionLabel": "Kết nối",
+  "footerLeft": "Cho thuê phòng",
+  "footerRight": "Hỗ trợ 7/7",
+  "tags": [
+    {
+      "label": "Cầu Giấy · Đống Đa",
+      "tone": "green"
+    },
+    {
+      "label": "Hỗ trợ 7/7",
+      "tone": "blue"
+    }
+  ],
+  "links": [
+    {
+      "name": "Facebook",
+      "description": "Ảnh thực tế · Video tour phòng",
+      "url": "https://facebook.com/THAY_LINK",
+      "icon": "facebook",
+      "tone": "blue"
+    },
+    {
+      "name": "Youtube",
+      "description": "Tour phòng 360°",
+      "url": "https://youtube.com/THAY_LINK",
+      "icon": "youtube",
+      "tone": "red"
+    },
+    {
+      "name": "Zalo",
+      "description": "Nhắn tin · Tư vấn nhanh",
+      "url": "https://zalo.me/THAY_SO_DIEN_THOAI",
+      "icon": "chat",
+      "tone": "green"
+    },
+    {
+      "name": "Xem vị trí trên bản đồ",
+      "description": "Gần ĐH · Giao thông thuận tiện",
+      "url": "https://maps.google.com/?q=THAY_DIA_CHI",
+      "icon": "map",
+      "tone": "yellow"
+    }
+  ]
+}

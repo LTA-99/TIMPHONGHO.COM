@@ -1,0 +1,283 @@
+:root {
+  color-scheme: light;
+  --bg: #f5f5f5;
+  --card: #ffffff;
+  --text: #111111;
+  --muted: #666666;
+  --soft: #888888;
+  --line: #e5e5e5;
+  --green: #0f6e56;
+  --green-ink: #085041;
+  --green-soft: #e1f5ee;
+  --blue-ink: #0c447c;
+  --blue-soft: #e6f1fb;
+  --red-ink: #712b13;
+  --red-soft: #faece7;
+  --yellow-ink: #633806;
+  --yellow-soft: #faeeda;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem 3rem;
+  color: var(--text);
+  background: var(--bg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 480px;
+}
+
+.hero-card {
+  margin-bottom: 20px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--card);
+}
+
+.avatar {
+  width: 68px;
+  height: 68px;
+  border: 2px solid #1d9e75;
+  border-radius: 50%;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  background: var(--green-soft);
+  color: var(--green-ink);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.hero-info {
+  min-width: 0;
+}
+
+.hero-info h1 {
+  margin-bottom: 3px;
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+.hero-info p {
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.dot {
+  padding: 0 3px;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  border-radius: 20px;
+  padding: 3px 9px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.tag-green {
+  background: var(--green-soft);
+  color: var(--green-ink);
+}
+
+.tag-blue {
+  background: var(--blue-soft);
+  color: var(--blue-ink);
+}
+
+.section-label {
+  margin: 0 0 10px;
+  color: #999999;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.links-col {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.link-card {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 13px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--card);
+  transition: background 150ms ease, transform 150ms ease;
+}
+
+.link-card:hover {
+  background: #f9f9f9;
+  transform: translateY(-1px);
+}
+
+.link-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.link-icon svg,
+.cta-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.tone-blue {
+  background: var(--blue-soft);
+  color: var(--blue-ink);
+}
+
+.tone-red {
+  background: var(--red-soft);
+  color: var(--red-ink);
+}
+
+.tone-green {
+  background: var(--green-soft);
+  color: var(--green-ink);
+}
+
+.tone-yellow {
+  background: var(--yellow-soft);
+  color: var(--yellow-ink);
+}
+
+.link-body {
+  min-width: 0;
+  flex: 1;
+}
+
+.link-body strong {
+  display: block;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.link-body small {
+  color: var(--soft);
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.arrow {
+  color: #cccccc;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.cta-block {
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  background: var(--green);
+}
+
+.cta-block p {
+  margin-bottom: 2px;
+  color: #9fe1cb;
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.cta-block strong {
+  display: block;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 650;
+}
+
+.cta-btn {
+  border-radius: 8px;
+  padding: 9px 18px;
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  color: var(--green-ink);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.cta-btn:hover {
+  background: #f0fdf8;
+}
+
+.footer-line {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: #999999;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+@media (max-width: 360px) {
+  body {
+    padding-inline: 0.75rem;
+  }
+
+  .hero-card,
+  .cta-block {
+    padding-inline: 1rem;
+  }
+
+  .cta-block {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}

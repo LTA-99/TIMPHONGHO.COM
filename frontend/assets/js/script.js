@@ -1,0 +1,95 @@
+const fallbackProfile = {
+  name: "Nguyễn Văn A",
+  initials: "NA",
+  title: "Cho thuê phòng cao cấp tại Hà Nội",
+  subtitle: "Uy tín 5 năm",
+  domain: "timphongho.com",
+  contactLabel: "Liên hệ ngay",
+  phone: "0912.345.678",
+  phoneHref: "tel:0912345678",
+  ctaLabel: "Gọi ngay",
+  sectionLabel: "Kết nối",
+  footerLeft: "Cho thuê phòng",
+  footerRight: "Hỗ trợ 7/7",
+  tags: [],
+  links: [],
+};
+
+const icons = {
+  facebook:
+    '<svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>',
+  youtube:
+    '<svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.96-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon fill="#fff" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>',
+  chat:
+    '<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>',
+  map:
+    '<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg>',
+  phone:
+    '<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.08 6.08l1.19-1.19a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>',
+};
+
+const setText = (selector, value) => {
+  document.querySelectorAll(selector).forEach((element) => {
+    element.textContent = value;
+  });
+};
+
+const renderTags = (tags) => {
+  const row = document.querySelector("[data-tags]");
+  if (!row) return;
+
+  row.innerHTML = tags
+    .map((tag) => `<span class="tag tag-${tag.tone || "green"}">${tag.label}</span>`)
+    .join("");
+};
+
+const renderLinks = (links) => {
+  const list = document.querySelector("[data-links]");
+  if (!list) return;
+
+  list.innerHTML = links
+    .map(
+      (link) => `
+        <a class="link-card" href="${link.url}" target="_blank" rel="noreferrer">
+          <span class="link-icon tone-${link.tone || "green"}">${icons[link.icon] || icons.chat}</span>
+          <span class="link-body">
+            <strong>${link.name}</strong>
+            <small>${link.description}</small>
+          </span>
+          <span class="arrow" aria-hidden="true">›</span>
+        </a>
+      `,
+    )
+    .join("");
+};
+
+const renderProfile = (profile) => {
+  const merged = { ...fallbackProfile, ...profile };
+
+  document.title = `${merged.name} · Cho thuê phòng`;
+  setText("[data-name]", merged.name);
+  setText("[data-initials]", merged.initials);
+  setText("[data-title]", merged.title);
+  setText("[data-subtitle]", merged.subtitle);
+  setText("[data-section-label]", merged.sectionLabel);
+  setText("[data-contact-label]", merged.contactLabel);
+  setText("[data-phone]", merged.phone);
+  setText("[data-cta-label]", merged.ctaLabel);
+  setText("[data-footer-left]", merged.footerLeft);
+  setText("[data-footer-right]", merged.footerRight);
+
+  document.querySelector("[data-phone-link]")?.setAttribute("href", merged.phoneHref);
+  const phoneIcon = document.querySelector("[data-phone-icon]");
+  if (phoneIcon) phoneIcon.innerHTML = icons.phone;
+
+  renderTags(merged.tags || []);
+  renderLinks(merged.links || []);
+};
+
+fetch("./data/profile.json")
+  .then((response) => {
+    if (!response.ok) throw new Error("Cannot load profile.json");
+    return response.json();
+  })
+  .then(renderProfile)
+  .catch(() => renderProfile(fallbackProfile));
