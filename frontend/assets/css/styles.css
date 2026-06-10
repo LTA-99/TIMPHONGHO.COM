@@ -154,7 +154,12 @@ button {
   font-weight: 650;
 }
 
-.follow-line span {
+.stat-label {
+  color: var(--text);
+  font-weight: 650;
+}
+
+.stat-separator {
   padding: 0 6px;
 }
 
