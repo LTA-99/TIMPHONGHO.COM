@@ -332,6 +332,19 @@ button {
   line-height: 1.45;
 }
 
+.process-image {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--card);
+}
+
+.process-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 @media (max-width: 360px) {
   body {
     padding-inline: 0.75rem;

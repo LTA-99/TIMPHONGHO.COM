@@ -65,8 +65,16 @@ const renderProcess = (items) => {
   if (!list) return;
 
   list.innerHTML = items
-    .map(
-      (item, index) => `
+    .map((item, index) => {
+      if (item.image) {
+        return `
+          <article class="process-image">
+            <img src="${item.image}" alt="${item.alt || `Quy trình thuê phòng bước ${index + 1}`}" loading="lazy" />
+          </article>
+        `;
+      }
+
+      return `
         <article class="process-item">
           <span>${index + 1}</span>
           <div>
@@ -74,8 +82,8 @@ const renderProcess = (items) => {
             <p>${item.description}</p>
           </div>
         </article>
-      `,
-    )
+      `;
+    })
     .join("");
 };
 

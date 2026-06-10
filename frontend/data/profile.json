@@ -39,16 +39,28 @@
   ],
   "process": [
     {
-      "title": "Gửi nhu cầu",
-      "description": "Cho biết khu vực, ngân sách, số người ở và thời gian muốn nhận phòng."
+      "image": "./assets/images/QTT1.png",
+      "alt": "Quy trình thuê phòng bước 1"
     },
     {
-      "title": "Nhận danh sách phòng phù hợp",
-      "description": "Tư vấn các phòng còn trống, có hình ảnh thực tế và thông tin rõ ràng."
+      "image": "./assets/images/QTT2.png",
+      "alt": "Quy trình thuê phòng bước 2"
     },
     {
-      "title": "Xem phòng và chốt thuê",
-      "description": "Hẹn lịch xem phòng, hỗ trợ trao đổi điều kiện thuê và hoàn tất thủ tục."
+      "image": "./assets/images/QTT3.png",
+      "alt": "Quy trình thuê phòng bước 3"
+    },
+    {
+      "image": "./assets/images/QTT4.png",
+      "alt": "Quy trình thuê phòng bước 4"
+    },
+    {
+      "image": "./assets/images/QTT5.png",
+      "alt": "Quy trình thuê phòng bước 5"
+    },
+    {
+      "image": "./assets/images/QTT6.png",
+      "alt": "Quy trình thuê phòng bước 6"
     }
   ]
 }
